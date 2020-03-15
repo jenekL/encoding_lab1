@@ -47,7 +47,7 @@ public class JailEncoder {
     private void createCodingMatrix(String word) {
         Optional.ofNullable(word).ifPresent(s -> {
             codes.clear();
-            List<Integer> newWord = ArrayConverter.convertToList(deleteRepeatedCharacters(codeWord));
+            List<Integer> newWord = ArrayConverter.convertToList(deleteRepeatedCharacters(word));
             for (int i = SMALL_CODES_BEGIN; i < SMALL_CODES_END; i++) {
                 codes.add(i);
             }
